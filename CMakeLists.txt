@@ -3,4 +3,4 @@ project(logreader)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(logreader src/app/main_001.cpp)
+add_executable(logreader src/app/main_001.cpp src/header/temp.hpp src/objects/temp.cpp)

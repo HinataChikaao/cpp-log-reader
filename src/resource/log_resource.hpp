@@ -11,5 +11,6 @@
 #define LOG_READER_THREE (3)
 
 #define LOG_READER_DELIMITER    (':')
+#define END_LINE    ('\n')
 
 #endif /* LOG_HEADER_RESOURCE */

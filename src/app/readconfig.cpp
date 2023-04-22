@@ -9,7 +9,7 @@
 #define APP     ("[app]")
 #define SERVER  ("[server]")
 
-int main() {
+int read_config() {
 
     /* the name of each category is shown as a number */
     enum {

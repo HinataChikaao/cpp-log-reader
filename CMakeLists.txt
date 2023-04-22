@@ -18,10 +18,10 @@ set(CMAKE_CXX_FLAGS "")
 add_executable(${PROJECT_NAME}
         src/app/main_001.cpp
         src/app/readconfig.cpp
-        src/objects/InputCommand.hpp
-        src/objects/stringutils.hpp
+        src/objects/commandvalidation.hpp
+        src/utils/stringutils.hpp
         src/exceptions/exceptions.hpp
-        src/resource/log_resource.hpp
+        src/resource/logresource.hpp
 
 
         )

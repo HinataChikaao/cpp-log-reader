@@ -1,14 +1,14 @@
 
 #include <string>
 #include "../exceptions/exceptions.hpp"
-#include "../resource/log_resource.hpp"
-#include "stringutils.hpp"
+#include "../resource/logresource.hpp"
+#include "src/utils/stringutils.hpp"
 
 
 #ifndef INPUT_COMMAND
 #define INPUT_COMMAND
 
-class InputCommand {
+class commandvalidation {
 
 private:
     std::string source{};
@@ -17,13 +17,13 @@ private:
     void init(int _argc, const char **_argv);
 
 public:
-    InputCommand() = delete;
+    commandvalidation() = delete;
 
-    InputCommand(const InputCommand &inputCommand) = delete;
+    commandvalidation(const commandvalidation &inputCommand) = delete;
 
-    InputCommand(int _argc, const char **_argv);
+    commandvalidation(int _argc, const char **_argv);
 
-    virtual ~InputCommand();
+    virtual ~commandvalidation();
 
     std::string getSource();
 
@@ -31,19 +31,19 @@ public:
 
 };
 
-InputCommand::InputCommand(const int _argc, const char **_argv) {
+commandvalidation::commandvalidation(const int _argc, const char **_argv) {
     init(_argc, _argv);
 }
 
-std::string InputCommand::getSource() {
+std::string commandvalidation::getSource() {
     return StringUtils::getCommValue(this->source, LOG_READER_DELIMITER);
 }
 
-std::string InputCommand::getDest() {
+std::string commandvalidation::getDest() {
     return StringUtils::getCommValue(this->dest, LOG_READER_DELIMITER);
 }
 
-void InputCommand::init(const int _argc, const char **_argv) {
+void commandvalidation::init(const int _argc, const char **_argv) {
 
     if (_argc != LOG_READER_THREE)
         throw InputCommandException(LOG_READER_INVALID_COMMANDS);
@@ -72,7 +72,7 @@ void InputCommand::init(const int _argc, const char **_argv) {
     StringUtils::logger("part four ...");
 }
 
-InputCommand::~InputCommand() = default;
+commandvalidation::~commandvalidation() = default;
 
 
 #endif /* INPUT_COMMAND */

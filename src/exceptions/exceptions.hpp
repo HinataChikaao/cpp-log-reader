@@ -1,23 +1,8 @@
-#ifndef LOG_EXCEPTIONS
-#define LOG_EXCEPTIONS
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#ifndef HEADER_STRING
-#define HEADER_STRING
-
 #include <string>
-
-#endif /* HEADER_STRING */
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#ifndef HEADER_EXCEPTION
-#define HEADER_EXCEPTION
-
 #include <exception>
 
-#endif /* HEADER_EXCEPTION */
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+#ifndef LOG_EXCEPTIONS
+#define LOG_EXCEPTIONS
 
 class InputCommandException : std::exception {
 

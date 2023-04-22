@@ -1,0 +1,8 @@
+
+    - check if directory exist.
+        - if not throw exception.
+
+    - check if destination file exit.
+        - if yes throw exception.
+
+    - create a list of directory files.

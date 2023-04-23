@@ -24,4 +24,4 @@ add_executable(${PROJECT_NAME}
         src/resource/logresource.hpp
 
 
-        )
+        src/utils/fileutils.hpp)
